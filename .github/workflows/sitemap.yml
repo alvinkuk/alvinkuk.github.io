@@ -1,8 +1,5 @@
 name: Generate sitemap 
 
-permissions:
-  contents: write
-
 on:
   workflow_dispatch:
   push:
@@ -12,6 +9,9 @@ on:
 jobs:
   sitemap:
     runs-on: ubuntu-latest
+  
+  permissions:
+  contents: write
 
     steps:
     - name: Checkout the repo
